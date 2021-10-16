@@ -7,6 +7,11 @@
   }
   #mobile_header {
     padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 10;
   }
   #mobile_header .nav-bar {
     display: -webkit-box;
@@ -85,6 +90,35 @@
   #hero .card .hero-title {
     font-size: 2rem;
   }
+  #about_us {
+    background-position: center;
+  }
+  #about_us::before {
+    left: 0;
+    top: 0;
+    height: 50%;
+    width: 100%;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(rgba(255, 255, 255, 0.9)), color-stop(rgba(255, 255, 255, 0.8)), color-stop(rgba(255, 255, 255, 0.7)), color-stop(rgba(255, 255, 255, 0.6)), to(rgba(255, 255, 255, 0.3)));
+    background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3));
+    -webkit-filter: blur(20px);
+            filter: blur(20px);
+  }
+  #footer {
+    padding: 150px 40px;
+  }
+  #footer .footer-main-logo {
+    position: absolute;
+    left: -10px;
+    top: 18%;
+  }
+  #footer .go-up-button {
+    top: 0%;
+    right: -10%;
+  }
+  .img-container {
+    position: relative;
+    bottom: unset !important;
+  }
 }
 
 @media only screen and (min-width: 769px) {
@@ -102,6 +136,30 @@
   }
   .section-title h2 {
     font-size: 2rem;
+  }
+  #about_us {
+    background-position: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #about_us::before {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 40%;
+    background: -webkit-gradient(linear, left top, right top, from(white), color-stop(rgba(255, 255, 255, 0.9)), color-stop(rgba(255, 255, 255, 0.8)), color-stop(rgba(255, 255, 255, 0.7)), color-stop(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.3)));
+    background: linear-gradient(to right, white, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3));
+    -webkit-filter: blur(40px);
+            filter: blur(40px);
+  }
+  #footer .footer-main-logo {
+    left: -10px;
+    top: 10px;
+  }
+  #footer .go-up-button {
+    top: 0%;
+    right: -20px;
   }
 }
 

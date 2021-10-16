@@ -39,9 +39,9 @@ $(document).ready(function () {
         loop: true,
         margin: 10,
         center: true,
-        // autoplay:true,
-        // autoplayTimeout: 3000,
-        // autoplayHoverPause:true,
+        autoplay:true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause:true,
         items:1,
         responsive:{
             0:{
@@ -56,17 +56,47 @@ $(document).ready(function () {
         }
     });
 
-    var owl = $('#testimonial_slider');
-    owl.owlCarousel();
-
-    $('#testimonial_prev_arrow').click(function(){
-        owl.trigger('owl.prev');
-    });
-
+    var testimonial_owl = $('#testimonial_slider');
+    testimonial_owl.owlCarousel();
     $('#testimonial_next_arrow').click(function() {
-        owl.trigger('owl.next');
+        testimonial_owl.trigger('next.owl.carousel', [400]);
+    });
+    $('#testimonial_prev_arrow').click(function() {
+        testimonial_owl.trigger('prev.owl.carousel', [400]);
     });
 
+
+    $('#client_slider').owlCarousel({
+        loop:true,
+        margin:10,
+        autoplay:true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause:true,
+        responsive:{
+        stagePadding: 50,
+            0:{
+                items:1
+            },
+            500:{
+                items:3
+            },
+            7680:{
+                items:4
+            },
+            1200:{
+                items:5
+            }
+        }
+    })
+
+    var client_owl = $('#client_slider');
+    client_owl.owlCarousel();
+    $('#client_next_arrow').click(function() {
+        client_owl.trigger('next.owl.carousel', [400]);
+    });
+    $('#client_prev_arrow').click(function() {
+        client_owl.trigger('prev.owl.carousel', [400]);
+    });
 
 });
 
